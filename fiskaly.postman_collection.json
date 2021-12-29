@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "1e2664eb-95cc-43f3-96cd-513ef96ef5bd",
+		"name": "fiskaly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllSignatures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/singatures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"singatures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSignature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"label\": \"new signature\",\r\n\t\"type\": \"RSA\",\r\n    \"counter\": 0\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1337/singature",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"singature"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSignature",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"label\": \"new \",\r\n\t\"type\": \"RSA\",\r\n    \"counter\": 2\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1337/singature/0d9f2a31-2cfa-42c7-87b3-a86edb221690",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"singature",
+						"0d9f2a31-2cfa-42c7-87b3-a86edb221690"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSignature",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/singature/0d9f2a31-2cfa-42c7-87b3-a86edb221690",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"singature",
+						"0d9f2a31-2cfa-42c7-87b3-a86edb221690"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
